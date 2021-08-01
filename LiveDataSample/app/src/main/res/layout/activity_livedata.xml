@@ -16,9 +16,11 @@
   -->
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+<!--
+    Android offers support to write declarative layouts using data binding.
+    This minimizes the necessary code in your application logic to connect to the user interface elements.
+-->
     <data>
-
         <variable
             name="viewmodel"
             type="com.android.example.livedatabuilder.LiveDataViewModel" />

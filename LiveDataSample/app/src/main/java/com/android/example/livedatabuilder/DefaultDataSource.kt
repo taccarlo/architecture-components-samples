@@ -36,7 +36,7 @@ class DefaultDataSource(private val ioDispatcher: CoroutineDispatcher) : DataSou
         liveData {
             while (true) {
                 emit(System.currentTimeMillis())
-                delay(1000)
+                delay(2000)
             }
         }
 
@@ -51,7 +51,7 @@ class DefaultDataSource(private val ioDispatcher: CoroutineDispatcher) : DataSou
         var counter = 0
         while (true) {
             counter++
-            delay(2000)
+            delay(4000)
 
             emit(weatherConditions[counter % weatherConditions.size])
         }

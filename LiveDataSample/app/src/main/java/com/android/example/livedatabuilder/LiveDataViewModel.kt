@@ -33,6 +33,30 @@ class LiveDataViewModel(
     private val dataSource: DataSource
 ) : ViewModel() {
 
+    /**
+     *  viewmodel provides:
+     *   currentTime
+     *   currentTimeTransformed
+     *   currentWeather
+     *   cachedValue
+     *  and
+     *   onRefresh() function
+     *  all used from the layout xml page
+     *
+     * LiveData builder that emits values while it's observed:
+     *  -currentTime shows milliseconds passed with a livedata builder
+     * Transformation in a suspend function or background:
+     *  -currentimetrasformed shows a suspend function: . A suspending function is simply a function that
+     *  can be paused and resumed at a later time. They can execute a long running operation and wait for
+     *  it to complete without blocking.
+     * Using emit and emitSource:
+     *  -currentweather get data from fecthweather, similar to getCurrentTime function
+     * Cache value and fetch new data using coroutines:
+     *  -cachedValue takes the value of cacheddata and it's updated from onrefresh click button to simulate a cached value
+     *
+     *
+     */
+
     // Exposed LiveData from a function that returns a LiveData generated with a liveData builder
     val currentTime = dataSource.getCurrentTime()
 
